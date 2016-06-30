@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+{% include "home_templates/mycss.html" %}
+<style>
+.first-title{
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+    font-size: 100px;
+    color: #fff;
+	 text-align: center;
+}
+</style>
+{% include 'home_templates/navbar.html' %}
+<body>
+{% include "home_templates/myjs.html" %}
+<img src='{% static "img/stubhub_logo.png" %}' alt="Mountain View" style="max-width:100px; margin-top:15px;"></a>
+</body>
+
+<div class="first-title"> Stubhub Interviews</div>
+
+</html>
+
+
