@@ -6,3 +6,90 @@
     float: none;
     margin: 0 auto;
 }
+
+
+HTML  CSS   Result
+Edit on 
+/**************************
+  DEFAULT BOOTSTRAP STYLES
+**************************/
+
+.wow {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 16px;
+}
+  
+.wow-lg {
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.wow-primary {
+  color: #de3480;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.wow-primary:hover,
+.wow-primary:focus,
+.wow-primary:active,
+.wow-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #18e687;
+  background-color: #18e687;
+  border-color: #18e687;
+}
+
+/***********************
+  OUTLINE BUTTONS
+************************/
+
+.wow.outline {
+    background: none;
+    padding: 12px 22px;
+}
+.wow-primary.outline {
+    border: 2px solid #de3480;
+    color: #de3480;
+}
+.wow-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+.wow-primary.outline:active, .btn-primary.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+/***********************
+  CUSTON BTN VALUES
+************************/
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}

@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 {% include "home_templates/mycss.html" %}
 <style>
+body {
+    background-color: #0673ca;
+}
 .first-title{
 	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-weight: 100;
@@ -10,14 +13,27 @@
     color: #fff;
 	 text-align: center;
 }
+img.center{
+ display: block;
+    margin: 0 auto;
+}
+.center{
+ display: block;
+    margin: 0 auto;
+}
 </style>
 {% include 'home_templates/navbar.html' %}
 <body>
 {% include "home_templates/myjs.html" %}
-<img src='{% static "img/stubhub_logo.png" %}' alt="Mountain View" style="max-width:100px; margin-top:15px;"></a>
+
 </body>
 
-<div class="first-title"> Stubhub Interviews</div>
+<div class="wow-fade first-title"> StubHub Interviews</div>
+<img class="wow-fade-slower center" src='{% static "img/stubhub_logo.png" %}' alt="Mountain View" style="max-width:200px; margin-top:15px;"></a>
+<a class="wow wow-primary wow-lg outline center" href="{% url 'home' %}" role="button">Software Quality Engineer</a>
+<a class="wow wow-primary wow-lg outline center" href="{% url 'home' %}" role="button">Software Developer</a>
+<a class="wow wow-primary wow-lg outline center" href="{% url 'home' %}" role="button">General</a>
+
 
 </html>
 

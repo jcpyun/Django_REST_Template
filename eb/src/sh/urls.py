@@ -6,6 +6,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from django.conf.urls import include
 
 urlpatterns = [
+    
     url(r'^api-auth/', include('rest_framework.urls',
                                namespace='rest_framework')),
     url(r'^users/$', views.UserList.as_view()),

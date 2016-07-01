@@ -3,7 +3,7 @@
 function setup() {
   // canvas=createCanvas(windowWidth, windowHeight);
   canvas = createCanvas(window.innerWidth, window.innerHeight);
-  canvas.position(0,0);
+  canvas.position(0,500);
   colorMode(HSB);
   radians(DEGREES);
 
@@ -12,8 +12,7 @@ function setup() {
 function draw() {
   
   clear();
-
- 
+  background("white")
   var valueX;
   var xPlace = map(mouseX, 0, width, ((width / 2) - 150), ((width / 2) + 150));
   var cSize = map (mouseX, 0, width, 0, 500);
