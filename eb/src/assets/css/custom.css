@@ -7,6 +7,10 @@
     margin: 0 auto;
 }
 
+div.jpoffset{
+    position:relative;
+    top: 50px;
+}
 
 HTML  CSS   Result
 Edit on 
@@ -37,8 +41,8 @@ Edit on
   
 .wow-lg {
   font-size: 18px;
-  line-height: 1.33;
-  border-radius: 6px;
+  line-height: 5;
+  border-radius: 100px;
 }
 
 .wow-primary {
@@ -66,8 +70,8 @@ Edit on
     padding: 12px 22px;
 }
 .wow-primary.outline {
-    border: 2px solid #de3480;
-    color: #de3480;
+    border: 2px solid #2f0466;
+    color: #2f0466;
 }
 .wow-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
     color: #33a6cc;

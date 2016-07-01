@@ -2,8 +2,11 @@
 
 function setup() {
   // canvas=createCanvas(windowWidth, windowHeight);
-  canvas = createCanvas(window.innerWidth, window.innerHeight);
-  canvas.position(0,500);
+  // canvas = createCanvas(window.innerWidth, window.innerHeight);
+  canvasx=500;
+  canvasy=500;
+    canvas = createCanvas(canvasx, canvasy);
+  canvas.position(window.innerWidth/2-canvasx/2,window.innerHeight/2+canvasy/2);
   colorMode(HSB);
   radians(DEGREES);
 
@@ -12,13 +15,13 @@ function setup() {
 function draw() {
   
   clear();
-  background("white")
+  // background("white")
   var valueX;
   var xPlace = map(mouseX, 0, width, ((width / 2) - 150), ((width / 2) + 150));
   var cSize = map (mouseX, 0, width, 0, 500);
 
-  line(((width / 2) - 150), (height - 40), ((width / 2) + 150), (height - 40));
-  rect(xPlace, (height - 55), 10, 30);
+  // line(((width / 2) - 150), (height - 40), ((width / 2) + 150), (height - 40));
+  // rect(xPlace, (height - 55), 10, 30);
 
 
   for (var i = 0; i < 4; i++) {

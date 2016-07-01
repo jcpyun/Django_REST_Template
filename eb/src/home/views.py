@@ -7,3 +7,9 @@ def home(request):
 
     }
     return render(request,template,context)
+def input(request):
+    template="home_templates/input.html"
+    context={
+
+    }
+    return render(request,template,context)
