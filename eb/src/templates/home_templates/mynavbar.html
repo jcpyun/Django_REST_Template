@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<style>
+      /*<!--stubpurple = color('#2f0466');
+  stubred = color('#de3480');
+  stubteal = color('#00b8b8');
+  stubblue = color('#0673ca');
+  stublightgreen = color('#18e687');-->
+  */
+    .wow-font{
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+    font-size: 20px;
+    color: #fff;
+	 text-align: center;
+}
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f0466;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #de3480;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+</style>
+<div id="" class="">
+    <ul class="wow-font">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'input' %}">Input</a></li>
+    </ul>
+</div>
+ 
