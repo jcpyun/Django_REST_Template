@@ -20,6 +20,10 @@ from django.conf.urls import url, include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^home/','home.views.home',name='home'),
+    url(r'^auth_home/','home.views.auth_home',name='auth_home'),
+     url(r'^login/$', 'django.contrib.auth.views.login',name="login"),
+    url(r'^logout/$', 'django.contrib.auth.views.logout',name="logout"),
     url(r'^', include('sh.urls')),
     url(r'^input/','home.views.input',name='input'),
+    
 ]

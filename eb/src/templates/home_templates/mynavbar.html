@@ -50,6 +50,9 @@ li a:hover:not(.active) {
     <ul class="wow-font">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'input' %}">Input</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout' %}?next=/home/">Logout</a></li>
+        {% endif %}
     </ul>
 </div>
  

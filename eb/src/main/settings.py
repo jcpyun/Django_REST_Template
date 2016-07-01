@@ -38,10 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #####
-    'home.apps.HomeConfig',
+    'registration',
     'rest_framework',
-    'sh.apps.ShConfig'
+    #####
+    'home.apps.HomeConfig',
+    'sh.apps.ShConfig',
 ]
+
+LOGIN_URL = '/login/'
+
+LOGIN_REDIRECT_URL = '/auth_home'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',

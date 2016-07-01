@@ -145,7 +145,47 @@ Edit on
 	margin-left:auto;
 	margin-right:auto;
 }
-
+/***********************
+  FORM http://codepen.io/colorlib/pen/rxddKy
+************************/
+.wow-form{
+ position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.wow-form input{
+	font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.wow-form button{
+	 font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #18e687;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.wow-form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
 
 </style>
 {% include 'home_templates/mynavbar.html' %}
@@ -158,11 +198,41 @@ Edit on
 <img class="wow-fade-slower center" src='{% static "img/stubhub_logo.png" %}' alt="Mountain View" style="max-width:200px; margin-top:15px;"></a>
 <!--<a class="fa fa-github fa-5x" href="https://github.com/jcpyun"></a>-->
 <br>
-<div class= "text-center jpoffset">
-<a class="wow wow-primary wow-lg outline col-md-4 wow-button-font" href="{% url 'home' %}" role="button">Software Quality Engineer</a>
-<a class="wow wow-primary wow-lg outline col-md-4 wow-button-font" href="{% url 'home' %}" role="button">Software Developer</a>
-<a class="wow wow-primary wow-lg outline col-md-4 wow-button-font" href="{% url 'home' %}" role="button">General</a>
+
+
+
+
+{% if request.user.is_authenticated %}
+
+<h1> Welcome {{ request.user }} </h1>
+<a href="{% url 'logout' %}?next=/home/">Logout</a>
+{% else %}
+
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-error">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-error">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+<div class= "wow-form">
+	<form class="" method = 'POST' action = '{% url "login" %}'>{% csrf_token %}           
+				<input type= 'text'  name = 'username' placeholder = 'Username' />
+				<input type= 'password' name = 'password' placeholder = 'Password' />
+				<button type= 'submit' >Login</button>
+	</form>
 </div>
+{% endif %}
 </body>
 </html>
 
