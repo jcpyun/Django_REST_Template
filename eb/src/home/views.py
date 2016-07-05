@@ -11,7 +11,7 @@ def home(request):
 def auth_home(request):
     template="home_templates/auth_home.html"
     context={
-
+        
     }
     return render(request,template,context)
 def input(request):

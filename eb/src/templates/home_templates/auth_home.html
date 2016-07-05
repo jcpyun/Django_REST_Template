@@ -146,6 +146,25 @@ text-align: center;
     border: 3px solid #73AD21;
     padding: 10px;
 }
+
+
+#square {
+  position:relative;
+  width:50%;
+  background:blue;
+}
+
+#square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+#content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 </style>
 
 
@@ -160,7 +179,7 @@ text-align: center;
 <div class= auth-text> What would you like to do today? </div>
 {% endif %}
 <br>
-
+<!--<div id="square"></div>-->
 <div id= "wrapper" class= "jpoffset center wow-center">
 	
         <a class="wow wow-primary wow-lg outline wow-button-font" href="{% url 'home' %}" role="button">GET</a>
