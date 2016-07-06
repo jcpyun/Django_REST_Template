@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<style>
+      /*<!--stubpurple = color('#2f0466');
+  stubred = color('#de3480');
+  stubteal = color('#00b8b8');
+  stubblue = color('#0673ca');
+  stublightgreen = color('#18e687');-->
+  */
+    .wow-font{
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+    font-size: 20px;
+    color: #fff;
+	 text-align: center;
+}
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2f0466;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #de3480;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+<div id="" class="">
+    <ul class="wow-font">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        
+        <li><a href="{% url 'input' %}">Input</a></li>
+        </div>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'logout' %}?next=/home/">Logout</a></li>
+        {% endif %}
+    </ul>
+</div>
+ 
